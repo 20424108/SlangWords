@@ -14,7 +14,6 @@ public class SlangMap {
                 String slangStr = scanner.nextLine();
                 Slang slang = new Slang(slangStr);
                 this.slangMap.put(slang.slang, slang.definition);
-                System.out.println(slang);
             }
             scanner.close();
         } catch (FileNotFoundException e) {
