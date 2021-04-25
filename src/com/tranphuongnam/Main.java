@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            File myObj = new File("SlangList.txt");
+            File myObj = new File("data/SlangList.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
