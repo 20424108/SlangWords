@@ -5,7 +5,17 @@ import java.util.*;
 
 public class SlangMap {
     protected Map<String, String> slangMap = new HashMap<String, String>();
+
     public SlangMap(){}
+
+    public Map<String, String> getSlangMap() {
+        return this.slangMap;
+    }
+
+    public void setSlangMap(Map<String, String> slangMap) {
+        this.slangMap = slangMap;
+    }
+
     public void readFromFile() {
         try {
             File slangList = new File("data/SlangList.txt");

@@ -28,7 +28,7 @@ public class Slang {
     }
 
     public String getSlang() {
-        return slang;
+        return this.slang;
     }
 
     public void setSlang(String slang) {
@@ -36,7 +36,7 @@ public class Slang {
     }
 
     public String getDefinition() {
-        return definition;
+        return this.definition;
     }
 
     public void setDefinition(String definition) {
