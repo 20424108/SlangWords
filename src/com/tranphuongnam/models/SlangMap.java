@@ -2,6 +2,7 @@ package com.tranphuongnam.models;
 
 import java.io.*;
 import java.util.*;
+import java.util.regex.Pattern;
 
 public class SlangMap {
     protected Map<String, String> slangMap = new HashMap<String, String>();
@@ -29,5 +30,21 @@ public class SlangMap {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    public Slang searchBySlang(String slang) {
+        String definition = this.slangMap.get(slang);
+        return new Slang(slang, definition);
+    }
+
+    public List<Slang> searchByDefinition(String keyword) {
+        List<Slang> result = new ArrayList<Slang>();
+        for (Map.Entry<String, String> entry : slangMap.entrySet()) {
+            boolean match = Pattern.matches(".*" + keyword + ".*", entry.getValue());
+            if (match) {
+                result.add(new Slang(entry.getKey(), entry.getValue()));
+            }
+        }
+        return result;
     }
 }
