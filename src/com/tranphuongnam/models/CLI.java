@@ -13,33 +13,7 @@ public class CLI {
             System.out.println(this.showMenu());
             System.out.print("Input: ");
             input = scanner.nextInt();
-            switch (input) {
-                case 1:
-                    this.addStudent();
-                    break;
-                case 2:
-                    this.updateStudent();
-                    break;
-                case 3:
-                    this.deleteStudent();
-                case 4:
-                    System.out.println(this.studentList.csvAscendingId());
-                    break;
-                case 5:
-                    System.out.println(this.studentList.csvDescendingId());
-                    break;
-                case 6:
-                    System.out.println(this.studentList.csvAscendingGrade());
-                    break;
-                case 7:
-                    System.out.println(this.studentList.csvDescendingGrade());
-                    break;
-                case 9:
-                    this.exportToCsv();
-                    break;
-                default:
-                    break;
-            }
+            
         } while (input != 0);
     }
 
