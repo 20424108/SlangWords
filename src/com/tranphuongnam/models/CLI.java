@@ -13,7 +13,7 @@ public class CLI {
             System.out.println(this.showMenu());
             System.out.print("Input: ");
             input = scanner.nextInt();
-            
+
         } while (input != 0);
     }
 
