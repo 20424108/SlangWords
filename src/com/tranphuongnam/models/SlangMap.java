@@ -47,4 +47,48 @@ public class SlangMap {
         }
         return result;
     }
+
+    public int insertASlang(String slang, String definition) {
+        if (this.slangMap.containsKey(slang)) {
+            return 1;
+        } else {
+            this.slangMap.put(slang, definition);
+            return 0;
+        }
+    }
+
+    public int editASlang(String slangToEdit, String newDefinition) {
+        if (this.slangMap.containsKey(slangToEdit)) {
+            this.slangMap.put(slangToEdit, newDefinition);
+            return 0;
+        }
+        else {
+            return 1;
+        }
+    }
+
+    public int deleteASlang(String slangToDelete) {
+        if (this.slangMap.containsKey(slangToDelete)) {
+            this.slangMap.remove(slangToDelete);
+            return 0;
+        }
+        else {
+            return 1;
+        }
+    }
+
+    public void restore() {
+        try {
+            File slangList = new File("data/OriginalSlangs.txt");
+            Scanner scanner = new Scanner(slangList);
+            while (scanner.hasNextLine()) {
+                String slangStr = scanner.nextLine();
+                Slang slang = new Slang(slangStr);
+                this.slangMap.put(slang.slang, slang.definition);
+            }
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }

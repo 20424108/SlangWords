@@ -13,7 +13,12 @@ public class Main {
     public static void main(String[] args) {
         var slangMap = new SlangMap();
         slangMap.readFromFile();
-        List<Slang> slangs = slangMap.searchByDefinition("do");
+        List<Slang> slangs = slangMap.searchByDefinition("aws");
+        for (Slang slang: slangs) {
+            System.out.println(slang);
+        }
+        slangMap.insertASlang("aws", "aws");
+        slangs = slangMap.searchByDefinition("aws");
         for (Slang slang: slangs) {
             System.out.println(slang);
         }
