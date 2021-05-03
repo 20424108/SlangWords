@@ -49,7 +49,7 @@ public class CLI {
                 .concat("2. Search by slang").concat(System.lineSeparator())
                 .concat("3. Search by slang's definition").concat(System.lineSeparator())
                 .concat("4. Show search history").concat(System.lineSeparator())
-                .concat("-------------------------------------------------------").concat(System.lineSeparator());
+                .concat("").concat(System.lineSeparator());
         return menu;
     }
 }
