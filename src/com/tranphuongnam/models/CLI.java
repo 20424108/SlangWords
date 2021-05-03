@@ -3,7 +3,7 @@ package com.tranphuongnam.models;
 import java.util.*;
 
 public class CLI {
-    protected SlangMap slangMap = new HashMap<String, String>();
+    protected SlangMap slangMap;
 
     public CLI() {
         this.slangMap = slangMap;
