@@ -45,16 +45,10 @@ public class CLI {
 
     public String showMenu() {
         String menu = "-------------------------------------------------------".concat(System.lineSeparator())
-                .concat("1. Add a student").concat(System.lineSeparator())
-                .concat("2. Update a student").concat(System.lineSeparator())
-                .concat("3. Delete a student").concat(System.lineSeparator())
-                .concat("4. List ascending by ID").concat(System.lineSeparator())
-                .concat("5. List descending by ID").concat(System.lineSeparator())
-                .concat("6. List ascending by grade").concat(System.lineSeparator())
-                .concat("7. List descending by grade").concat(System.lineSeparator())
-                .concat("8. Import CSV").concat(System.lineSeparator())
-                .concat("9. Export CSV").concat(System.lineSeparator())
-                .concat("0. Exit").concat(System.lineSeparator())
+                .concat("1. List all slangs").concat(System.lineSeparator())
+                .concat("2. Search by slang").concat(System.lineSeparator())
+                .concat("3. Search by slang's definition").concat(System.lineSeparator())
+                .concat("4. Show search history").concat(System.lineSeparator())
                 .concat("-------------------------------------------------------").concat(System.lineSeparator());
         return menu;
     }
